@@ -7,7 +7,7 @@ public class Benchmarketing {
 
 
         MetodosOrdenamiento = new MetodosOrdenamiento();
-            int[] arreglo = generarArreglAleatorio(9000000);
+            int[] arreglo = generarArreglAleatorio(10000);
             Runnable tareaBurbuja = () -> MetodosOrdenamiento.burbujaTradicional(arreglo);
 
             double tiempoBurbujaMillis = medirConCurrentTime(tareaBurbuja);
@@ -23,7 +23,7 @@ public class Benchmarketing {
     private int[] generarArreglAleatorio(int size) {
             int[] arreglo = new int[size];
             for (int i = 0; i < size; i++) {
-                arreglo[i] = (int) (Math.random() * 999999999);
+                arreglo[i] = (int) (Math.random() * 9999999);
             }
             return arreglo;
     }
