@@ -6,6 +6,8 @@ class Benchmarking:
     
     def __init__(self):
         print("Bench Inicializado")
+
+    def ejemplo(self):
         self.mOrdenamiento = MetodosOrdenamiento()
         arreglo = self.buildArreglo(10000)
 
@@ -19,7 +21,7 @@ class Benchmarking:
     def buildArreglo(self, n):
         arreglo = []
         for i in range(n):
-            num = random.randint(0, 9999999)
+            num = random.randint(0, 99999)
             arreglo.append(num)
         return arreglo
     
@@ -32,3 +34,10 @@ class Benchmarking:
         inicio = time.time()
         tarea()
         return (time.time() - inicio) / 1_000_000_000.0
+
+    
+    def medir_tiempo(self, tarea, arreglo):
+        inicio = time.perf_counter()
+        tarea(arreglo)
+        fin = time.perf_counter()
+        return fin - inicio
