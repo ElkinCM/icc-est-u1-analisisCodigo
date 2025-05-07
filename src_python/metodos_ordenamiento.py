@@ -4,7 +4,7 @@ class MetodosOrdenamiento:
         arreglo = arreglo.copy()
         n = len(arreglo)
         for i in range(n):
-            for j in range (i + 1, n):
+            for j in range(i + 1, n):
                 if arreglo[i] > arreglo[j]:
                     aux = arreglo[i]
                     arreglo[i] = arreglo[j]
@@ -23,5 +23,7 @@ class MetodosOrdenamiento:
                     arreglo[i] = arreglo[min_index]
                     arreglo[min_index] = temp
         return arreglo
+
+metodos = MetodosOrdenamiento()
     
                     
